@@ -17,7 +17,7 @@ export function CompanyHeader({
   return (
     <div className="workspace-bar">
       <button className="back-button" onClick={onBack}>
-        <ArrowLeft size={16} /> CORTEX
+        <ArrowLeft size={16} /> 7thSense
       </button>
       <div className="workspace-company">
         <span className="status-pulse" /> {company}{' '}

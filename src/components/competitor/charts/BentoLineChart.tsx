@@ -85,8 +85,8 @@ export function BentoLineChart({
       >
         <defs>
           <linearGradient id="targetAreaGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#6d4aff" stopOpacity="0.16" />
-            <stop offset="100%" stopColor="#6d4aff" stopOpacity="0.0" />
+            <stop offset="0%" stopColor="#7c5cff" stopOpacity="0.16" />
+            <stop offset="100%" stopColor="#7c5cff" stopOpacity="0.0" />
           </linearGradient>
         </defs>
 
@@ -95,8 +95,8 @@ export function BentoLineChart({
           const y = getY(val);
           return (
             <g key={val}>
-              <line x1={padL} y1={y} x2={width - padR} y2={y} stroke="#eeeDE9" strokeDasharray="3 3" strokeWidth="1" />
-              <text x={padL - 8} y={y + 3} textAnchor="end" fontSize="9" fill="#aaa7ad" fontFamily="DM Mono, monospace">
+              <line x1={padL} y1={y} x2={width - padR} y2={y} stroke="rgba(255,255,255,0.15)" strokeDasharray="3 3" strokeWidth="1" />
+              <text x={padL - 8} y={y + 3} textAnchor="end" fontSize="9" fill="#9b8fd9" fontFamily="DM Mono, monospace">
                 {val}
               </text>
             </g>
@@ -105,7 +105,7 @@ export function BentoLineChart({
 
         {/* X axis labels */}
         {months.map((m, idx) => (
-          <text key={m} x={getX(idx)} y={height - 8} textAnchor="middle" fontSize="10" fill="#9a96a0" fontFamily="DM Mono, monospace">
+          <text key={m} x={getX(idx)} y={height - 8} textAnchor="middle" fontSize="10" fill="#9b8fd9" fontFamily="DM Mono, monospace">
             {m}
           </text>
         ))}
@@ -159,7 +159,7 @@ export function BentoLineChart({
               y1={padT}
               x2={getX(hoverIndex)}
               y2={padT + plotH}
-              stroke="#6d4aff"
+              stroke="#7c5cff"
               strokeWidth="1.5"
               strokeDasharray="2 2"
             />

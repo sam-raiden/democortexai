@@ -16,7 +16,7 @@ export function CompanyCard({ info, onClick }: CompanyCardProps) {
       style={{ cursor: onClick ? 'pointer' : 'default' }}
     >
       <div className="card-top">
-        <span className="company-avatar" style={{ backgroundColor: '#6d4aff' }}>
+        <span className="company-avatar" style={{ backgroundColor: '#d8a7a7', color: '#5b0f18' }}>
           {info.name.charAt(0)}
         </span>
         {onClick && (
@@ -28,7 +28,7 @@ export function CompanyCard({ info, onClick }: CompanyCardProps) {
       <div className="card-body">
         <p className="card-industry">{info.industry}</p>
         <h3>{info.name}</h3>
-        <p style={{ fontSize: '13px', color: '#94a3b8', marginTop: '8px', lineHeight: 1.5 }}>
+        <p style={{ fontSize: '13px', color: '#c9a9a9', marginTop: '8px', lineHeight: 1.5 }}>
           {info.summary}
         </p>
       </div>

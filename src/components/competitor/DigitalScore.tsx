@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import { CompanyKey } from '../../types/company';
 import { SnapshotCategory } from '../../types/competitor';
-import { LinkedInIcon, InstagramIcon, YouTubeIcon } from './Icons';
+import { InstagramIcon, LinkedInIcon, YouTubeIcon } from './Icons';
 import { BentoLineChart } from './charts/BentoLineChart';
 
 export interface DigitalScoreProps {

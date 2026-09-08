@@ -17,16 +17,16 @@ export function ScoreCard({ score, label, sublabel, rank }: ScoreCardProps) {
       viewport={{ once: true }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span style={{ fontSize: '12px', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+        <span style={{ fontSize: '12px', color: '#c9a9a9', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
           {label}
         </span>
         {rank && <span className="rank-tag">{rank}</span>}
       </div>
-      <div style={{ fontSize: '32px', fontWeight: 600, color: '#f8fafc', letterSpacing: '-0.02em' }}>
+      <div style={{ fontSize: '32px', fontWeight: 600, color: '#f8f1e7', letterSpacing: '-0.02em' }}>
         {score}
       </div>
       {sublabel && (
-        <span style={{ fontSize: '13px', color: '#64748b' }}>{sublabel}</span>
+        <span style={{ fontSize: '13px', color: '#c9a9a9' }}>{sublabel}</span>
       )}
     </motion.div>
   );

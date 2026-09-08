@@ -43,7 +43,7 @@ export function RecentAnalysisCard({ item, index, onClick }: RecentAnalysisCardP
       </div>
 
       <div className="card-chat-label">
-        <span className="chat-signal" /> CORTEX brief <span className="card-time">{item.time}</span>
+        <span className="chat-signal" /> 7thSense brief <span className="card-time">{item.time}</span>
       </div>
 
       <div className="card-body">

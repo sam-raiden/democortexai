@@ -54,7 +54,7 @@ export function PaidMatrix({ matrix, companyLabels, companyColors }: PaidMatrixP
       ))}
       <div className="pm-legend">
         <span>
-          <span className="pm-detected" style={{ borderColor: '#6d4aff', color: '#6d4aff' }}>
+          <span className="pm-detected" style={{ borderColor: '#d8a7a7', color: '#d8a7a7' }}>
             ✓
           </span>{' '}
           Detected

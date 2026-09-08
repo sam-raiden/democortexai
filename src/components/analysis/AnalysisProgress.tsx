@@ -20,6 +20,7 @@ export function AnalysisProgress({
   onAnalyze,
 }: AnalysisProgressProps) {
   const [query, setQuery] = useState('');
+  const [website, setWebsite] = useState('');
   const percentage = Math.round(((researchStep + 1) / steps.length) * 100);
 
   return (
@@ -95,22 +96,36 @@ export function AnalysisProgress({
             style={{ margin: '0 auto 24px' }}
             onSubmit={(e) => {
               e.preventDefault();
-              if (query.trim()) onAnalyze(query.trim());
+              const name = query.trim();
+              const site = website.trim();
+              const value = site ? (name ? `${name} (${site})` : site) : name;
+              if (value) onAnalyze(value);
             }}
           >
             <Search size={19} />
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Enter a company name or website..."
-              aria-label="Company name"
-            />
+            <div className="lp-search-fields">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Company name..."
+                aria-label="Company name"
+              />
+              <span className="lp-search-divider" aria-hidden="true" />
+              <input
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                placeholder="Company website..."
+                aria-label="Company website"
+                type="text"
+                inputMode="url"
+              />
+            </div>
             <button type="submit">
               <ArrowUpRight size={18} />
             </button>
           </form>
           <p>
-            Start with a name, website, or short description. CORTEX will map
+            Start with a name, website, or short description. 7thSense will map
             the business, market, signals, and competitive context.
           </p>
           <div className="prompt-hint">

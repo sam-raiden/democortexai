@@ -13,7 +13,7 @@ export function InsightResponse({
   return (
     <div className="reference-card">
       <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-        <Sparkles size={14} style={{ color: '#8b5cf6' }} />
+        <Sparkles size={14} style={{ color: '#d8a7a7' }} />
         <h3>{title}</h3>
       </div>
       <div>{children}</div>

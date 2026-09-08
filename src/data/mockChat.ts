@@ -9,7 +9,7 @@ export const mockSuggestedPrompts: string[] = [
 export function getMockAIResponse(company: Company, question: string): string {
   const q = question.toLowerCase();
   if (q.includes('expand') || q.includes('growth') || q.includes('strategy') || q.includes('why are they expanding')) {
-    return `CORTEX intelligence indicates that ${company} is expanding rapidly by turning its core technological depth into a comprehensive enterprise platform relationship. By bundling multi-product capabilities and establishing strong partner distribution channels, ${company} is scaling revenue per customer while locking in platform stickiness.`;
+    return `7thSense intelligence indicates that ${company} is expanding rapidly by turning its core technological depth into a comprehensive enterprise platform relationship. By bundling multi-product capabilities and establishing strong partner distribution channels, ${company} is scaling revenue per customer while locking in platform stickiness.`;
   }
   if (q.includes('competitor') || q.includes('rival') || q.includes('who are') || q.includes('strongest competitor')) {
     if (company === 'NVIDIA') {

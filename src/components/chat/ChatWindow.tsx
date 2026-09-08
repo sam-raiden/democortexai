@@ -33,9 +33,9 @@ export function ChatWindow({
     <section className="chat-conversation-section">
       <div className="chat-section-header">
         <div className="reference-kicker">
-          <Sparkles size={13} /> 08 / Interactive Intelligence
+          <Sparkles size={13} /> 10 / Interactive Intelligence
         </div>
-        <h2>Ask CORTEX about {company}</h2>
+        <h2>Ask 7thSense about {company}</h2>
         <p className="chat-section-subtitle">
           Query primary sources, business signals, and competitive insights in real-time.
         </p>

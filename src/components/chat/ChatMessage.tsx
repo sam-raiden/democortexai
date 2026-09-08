@@ -27,7 +27,7 @@ export function ChatMessage({ message }: ChatMessageProps) {
       )}
       <div className="chat-message-bubble">
         <div className="chat-message-meta">
-          <span className="chat-author">{isAssistant ? 'CORTEX' : 'You'}</span>
+          <span className="chat-author">{isAssistant ? '7thSense' : 'You'}</span>
           {message.timestamp && <span className="chat-timestamp">{message.timestamp}</span>}
         </div>
         <p className={isAssistant ? 'chat-answer' : 'chat-question-text'}>

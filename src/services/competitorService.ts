@@ -19,12 +19,12 @@ export const competitorService = {
     return mockSnapshotData;
   },
 
-  getLinkedInData(): SeriesRow[] {
-    return mockLinkedInData;
-  },
-
   getInstagramData(): SeriesRow[] {
     return mockInstagramData;
+  },
+
+  getLinkedInData(): SeriesRow[] {
+    return mockLinkedInData;
   },
 
   getWebsiteData(): SeriesRow[] {

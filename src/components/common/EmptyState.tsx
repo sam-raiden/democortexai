@@ -6,7 +6,7 @@ export interface EmptyStateProps {
 }
 
 export function EmptyState({
-  message = 'Start with a name, website, or short description. CORTEX will map the business, market, signals, and competitive context.',
+  message = 'Start with a name, website, or short description. 7thSense will map the business, market, signals, and competitive context.',
   hint = 'The clearer the question, the sharper the brief.',
 }: EmptyStateProps) {
   return (

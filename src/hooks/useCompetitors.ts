@@ -15,8 +15,8 @@ import { mockCompanyColors, mockCompanyLabels } from '../data/mockCompanies';
 
 export function useCompetitors() {
   const snapshotData = useMemo(() => mockSnapshotData, []);
-  const linkedInData = useMemo(() => mockLinkedInData, []);
   const instagramData = useMemo(() => mockInstagramData, []);
+  const linkedInData = useMemo(() => mockLinkedInData, []);
   const websiteData = useMemo(() => mockWebsiteData, []);
   const seoData = useMemo(() => mockSeoData, []);
   const videoData = useMemo(() => mockVideoData, []);
@@ -29,8 +29,8 @@ export function useCompetitors() {
 
   return {
     snapshotData,
-    linkedInData,
     instagramData,
+    linkedInData,
     websiteData,
     seoData,
     videoData,

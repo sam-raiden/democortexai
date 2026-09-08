@@ -9,11 +9,15 @@ export interface NewAnalysisProps {
 
 export function NewAnalysis({ onStartAnalysis }: NewAnalysisProps) {
   const [query, setQuery] = useState('');
+  const [website, setWebsite] = useState('');
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      onStartAnalysis(query.trim());
+    const name = query.trim();
+    const site = website.trim();
+    const value = site ? (name ? `${name} (${site})` : site) : name;
+    if (value) {
+      onStartAnalysis(value);
     }
   };
 
@@ -36,12 +40,23 @@ export function NewAnalysis({ onStartAnalysis }: NewAnalysisProps) {
 
         <form className="company-search" onSubmit={handleSubmit} style={{ margin: '24px auto', maxWidth: '520px' }}>
           <Search size={19} />
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Enter a company name or website..."
-            aria-label="Company name"
-          />
+          <div className="lp-search-fields">
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Company name..."
+              aria-label="Company name"
+            />
+            <span className="lp-search-divider" aria-hidden="true" />
+            <input
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              placeholder="Company website..."
+              aria-label="Company website"
+              type="text"
+              inputMode="url"
+            />
+          </div>
           <button type="submit">
             <ArrowUpRight size={18} />
           </button>
@@ -58,7 +73,7 @@ export function NewAnalysis({ onStartAnalysis }: NewAnalysisProps) {
 
         <div className="empty-company-prompt" style={{ marginTop: '32px' }}>
           <p>
-            Start with a name, website, or short description. CORTEX will map
+            Start with a name, website, or short description. 7thSense will map
             the business, market, signals, and competitive context.
           </p>
           <div className="prompt-hint">

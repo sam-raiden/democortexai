@@ -5,6 +5,7 @@ import { CompetitorHeader } from '../components/competitor/CompetitorHeader';
 import { CompetitorSelector } from '../components/competitor/CompetitorSelector';
 import { DigitalScore } from '../components/competitor/DigitalScore';
 import { BenchmarkTable } from '../components/competitor/BenchmarkTable';
+import { LinkedInPresence } from '../components/competitor/LinkedInPresence';
 import { SocialAnalytics } from '../components/competitor/SocialAnalytics';
 import { WebsiteAnalytics } from '../components/competitor/WebsiteAnalytics';
 import { SEOAnalytics } from '../components/competitor/SEOAnalytics';
@@ -22,8 +23,8 @@ export interface CompetitorAnalyticsProps {
 export function CompetitorAnalytics({ company, onBack }: CompetitorAnalyticsProps) {
   const {
     snapshotData,
-    linkedInData,
     instagramData,
+    linkedInData,
     websiteData,
     seoData,
     videoData,
@@ -63,10 +64,15 @@ export function CompetitorAnalytics({ company, onBack }: CompetitorAnalyticsProp
         companyColors={companyColors}
       />
 
+      <LinkedInPresence
+        data={linkedInData}
+        insight={sectionInsights.linkedin}
+        companyLabels={companyLabels}
+        companyColors={companyColors}
+      />
+
       <SocialAnalytics
-        linkedInData={linkedInData}
         instagramData={instagramData}
-        linkedInInsight={sectionInsights.linkedin}
         instagramInsight={sectionInsights.instagram}
         companyLabels={companyLabels}
         companyColors={companyColors}

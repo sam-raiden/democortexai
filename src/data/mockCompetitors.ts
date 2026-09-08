@@ -2,21 +2,21 @@ import { GapInsightItem, PaidMatrixRow, SeriesRow, SnapshotCategory } from '../t
 
 export const mockSnapshotData: SnapshotCategory[] = [
   {
-    category: 'LinkedIn',
-    rows: [
-      { key: 'target', raw: '2.4M', pct: 69 },
-      { key: 'compA', raw: '3.1M', pct: 100 },
-      { key: 'compB', raw: '1.5M', pct: 48 },
-      { key: 'compC', raw: '1.9M', pct: 61 },
-    ],
-  },
-  {
     category: 'Instagram',
     rows: [
       { key: 'target', raw: '1.2M', pct: 58 },
       { key: 'compA', raw: '890K', pct: 43 },
       { key: 'compB', raw: '2.1M', pct: 100 },
       { key: 'compC', raw: '650K', pct: 31 },
+    ],
+  },
+  {
+    category: 'LinkedIn',
+    rows: [
+      { key: 'target', raw: '620K', pct: 52 },
+      { key: 'compA', raw: '1.2M', pct: 100 },
+      { key: 'compB', raw: '980K', pct: 82 },
+      { key: 'compC', raw: '410K', pct: 34 },
     ],
   },
   {
@@ -48,18 +48,18 @@ export const mockSnapshotData: SnapshotCategory[] = [
   },
 ];
 
-export const mockLinkedInData: SeriesRow[] = [
-  { key: 'target', raw: '42K', pct: 69, sub: [{ label: 'Growth', value: '+8.4%' }, { label: 'Posts/mo', value: '6' }, { label: 'Engagement', value: '2.1%' }, { label: 'Employees', value: '29K' }, { label: 'Openings', value: '431' }] },
-  { key: 'compA', raw: '61K', pct: 100, sub: [{ label: 'Growth', value: '+14.2%' }, { label: 'Posts/mo', value: '11' }, { label: 'Engagement', value: '5.4%' }, { label: 'Employees', value: '17K' }, { label: 'Openings', value: '287' }] },
-  { key: 'compB', raw: '33K', pct: 54, sub: [{ label: 'Growth', value: '+3.1%' }, { label: 'Posts/mo', value: '4' }, { label: 'Engagement', value: '1.8%' }, { label: 'Employees', value: '13K' }, { label: 'Openings', value: '156' }] },
-  { key: 'compC', raw: '49K', pct: 80, sub: [{ label: 'Growth', value: '+6.7%' }, { label: 'Posts/mo', value: '8' }, { label: 'Engagement', value: '3.2%' }, { label: 'Employees', value: '24K' }, { label: 'Openings', value: '198' }] },
-];
-
 export const mockInstagramData: SeriesRow[] = [
   { key: 'target', raw: '42K', pct: 49, sub: [{ label: 'Engagement', value: '2.1%' }, { label: 'Posts', value: '184' }, { label: 'Frequency', value: '12/mo' }, { label: 'Reels', value: '38%' }] },
   { key: 'compA', raw: '86K', pct: 100, sub: [{ label: 'Engagement', value: '5.4%' }, { label: 'Posts', value: '412' }, { label: 'Frequency', value: '28/mo' }, { label: 'Reels', value: '61%' }] },
   { key: 'compB', raw: '33K', pct: 38, sub: [{ label: 'Engagement', value: '3.8%' }, { label: 'Posts', value: '97' }, { label: 'Frequency', value: '7/mo' }, { label: 'Reels', value: '24%' }] },
   { key: 'compC', raw: '71K', pct: 83, sub: [{ label: 'Engagement', value: '4.1%' }, { label: 'Posts', value: '286' }, { label: 'Frequency', value: '19/mo' }, { label: 'Reels', value: '47%' }] },
+];
+
+export const mockLinkedInData: SeriesRow[] = [
+  { key: 'target', raw: '620K', pct: 52, sub: [{ label: 'Growth', value: '+8%' }, { label: 'Posts/mo', value: '6' }, { label: 'Engagement', value: '1.8%' }, { label: 'Employees', value: '29,000' }, { label: 'Openings', value: '412' }] },
+  { key: 'compA', raw: '1.2M', pct: 100, sub: [{ label: 'Growth', value: '+15%' }, { label: 'Posts/mo', value: '11' }, { label: 'Engagement', value: '3.2%' }, { label: 'Employees', value: '26,500' }, { label: 'Openings', value: '380' }] },
+  { key: 'compB', raw: '980K', pct: 82, sub: [{ label: 'Growth', value: '+4%' }, { label: 'Posts/mo', value: '5' }, { label: 'Engagement', value: '1.4%' }, { label: 'Employees', value: '124,800' }, { label: 'Openings', value: '890' }] },
+  { key: 'compC', raw: '410K', pct: 34, sub: [{ label: 'Growth', value: '+9%' }, { label: 'Posts/mo', value: '7' }, { label: 'Engagement', value: '2.1%' }, { label: 'Employees', value: '34,000' }, { label: 'Openings', value: '215' }] },
 ];
 
 export const mockWebsiteData: SeriesRow[] = [
@@ -86,21 +86,21 @@ export const mockVideoData: SeriesRow[] = [
 export const mockPaidMatrix: PaidMatrixRow[] = [
   { key: 'target', meta: 'detected', google: 'detected', linkedin: 'detected', video: 'none' },
   { key: 'compA', meta: 'detected', google: 'detected', linkedin: 'detected', video: 'detected' },
-  { key: 'compB', meta: 'none', google: 'detected', linkedin: 'none', video: 'none' },
-  { key: 'compC', meta: 'detected', google: 'none', linkedin: 'detected', video: 'detected' },
+  { key: 'compB', meta: 'none', google: 'detected', linkedin: 'detected', video: 'none' },
+  { key: 'compC', meta: 'detected', google: 'none', linkedin: 'none', video: 'detected' },
 ];
 
 export const mockCrossPlatformData = mockSnapshotData;
 
 export const mockSectionInsights: Record<string, string> = {
-  snapshot: 'AMD leads NVIDIA by 29% in LinkedIn followers, but NVIDIA dominates website reach by 51% over Intel.',
-  linkedin: 'AMD leads the target by 45% in LinkedIn followers and posts nearly twice as often.',
+  snapshot: 'AMD leads across most digital channels, but NVIDIA dominates website reach by 51% over Intel.',
+  linkedin: 'AMD leads the target by 94% in LinkedIn followers and posts nearly twice as often each month.',
   instagram: 'AMD\'s 5.4% engagement rate is 2.6x the target\'s 2.1% — the largest visible gap on the page.',
   website: 'AMD\'s estimated monthly traffic is 2.4x the target\'s, with a stronger US concentration.',
   seo: 'AMD\'s authority proxy of 52 is 86% higher than the target\'s 28.',
   video: 'Qualcomm leads with 11K subscribers — 9.2x the target\'s 1.2K, and uploads 5.5x more often.',
   paid: 'AMD is the only competitor detected across all four paid channels.',
-  cross: 'NVIDIA leads in website reach and YouTube, but trails in LinkedIn, Instagram, and SEO.',
+  cross: 'NVIDIA leads in website reach and YouTube, but trails in Instagram, LinkedIn, and SEO.',
 };
 
 export const mockDefaultGapInsights: GapInsightItem[] = [
